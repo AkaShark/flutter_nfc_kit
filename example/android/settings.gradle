@@ -1,3 +1,16 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+    plugins {
+        id 'com.android.application' version "${AGPVersion}"
+        id 'com.android.library' version "${AGPVersion}"
+        id 'org.jetbrains.kotlin.android' version "${KotlinVersion}"
+    }
+}
+
 include ':app'
 
 def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
